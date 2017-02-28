@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Aquarelle</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for "head"}}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Aquarelle</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> {{content-for "head"}}
 
-    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link rel="stylesheet" href="{{rootURL}}assets/aquarelle.css">
+  <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+  <link rel="stylesheet" href="{{rootURL}}assets/aquarelle.css"> {{content-for "head-footer"}}
+</head>
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+<body>
+  {{content-for "body"}}
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/aquarelle.js"></script>
+  <script src="{{rootURL}}assets/vendor.js"></script>
+  <script src="{{rootURL}}assets/aquarelle.js"></script>
+  <script src="bower_components/three.js/build/three.js"></script>
 
-    {{content-for "body-footer"}}
-  </body>
+  <script src="bower_components/aquarelle/Aquarelle.js"></script>
+
+  <script src="bower_components/three.js/examples/js/postprocessing/EffectComposer.js"></script>
+
+  <script src="bower_components/three.js/examples/js/postprocessing/ClearPass.js"></script>
+  <script src="bower_components/aquarelle/AquarellePass.js"></script>
+  <script src="bower_components/three.js/examples/js/postprocessing/ShaderPass.js"></script>
+  <script src="bower_components/three.js/examples/js/shaders/CopyShader.js"></script>
+
+  <script src="https://bl.ocks.org/mbostock/raw/4241134/d3.geom.contour.min.js"></script>
+  API {{content-for "body-footer"}}
+</body>
+
 </html>
